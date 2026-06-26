@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnluki542ne4d"]
+
+[ext_resource type="Script" path="res://scripts/died.gd" id="1_cf0ua"]
+[ext_resource type="FontFile" uid="uid://dqc7latk2up7d" path="res://assets/brackeys/fonts/PixelOperator8-Bold.ttf" id="2_4qg2q"]
+[ext_resource type="FontFile" uid="uid://bpqecwh8kr7yx" path="res://assets/brackeys/fonts/PixelOperator8.ttf" id="3_ssa0x"]
+
+[node name="Died" type="Node2D"]
+script = ExtResource("1_cf0ua")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Blackscreen" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+
+[node name="YouDied" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.5
+offset_top = -11.5
+offset_right = 34.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_4qg2q")
+theme_override_font_sizes/font_size = 50
+text = "You Died"
+
+[node name="RespawnHint" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -209.0
+offset_top = -206.0
+offset_right = 209.0
+offset_bottom = -183.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_ssa0x")
+theme_override_font_sizes/font_size = 20
+text = "Click \"Enter\" for respawn."
