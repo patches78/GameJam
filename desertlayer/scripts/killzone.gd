@@ -5,6 +5,6 @@ extends Area2D
 func _on_body_entered(body) -> void:
 	if (body.name == "Player"):
 		print("You died.")
-		d_sound.play()
-		await get_tree().create_timer(GlobalGameManager.death_timeout).timeout
+		#d_sound.play()
+		#await get_tree().create_timer(GlobalGameManager.death_timeout).timeout
 		get_tree().change_scene_to_file("res://scenes/died.tscn")

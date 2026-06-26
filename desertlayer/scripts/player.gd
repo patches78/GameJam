@@ -5,7 +5,7 @@ const SPEED = 100.0
 var JUMP_VELOCITY = -200.0
 
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var j_sound = $"../Music/Jump_Sound"
+#@onready var j_sound = $"../Music/Jump_Sound"
 
 func _physics_process(delta: float) -> void:
 	# get direction input {-1,0,1}
@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		j_sound.play()
+		#j_sound.play()
 
 	if direction:
 		velocity.x = direction * SPEED
