@@ -4,6 +4,9 @@ extends CharacterBody2D
 const SPEED = 100.0
 var JUMP_VELOCITY = -200.0
 
+const maxWater = 100.0
+var curWater = 100.0
+
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var j_sound = $"../Music/Jump_Sound"
 
@@ -38,3 +41,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func getHydrated() -> void:
+	curWater = maxWater
+	pass
+
+func _process(delta: float) -> void:
+	if(curWater > 0): curWater = curWater-1
+	pass

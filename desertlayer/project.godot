@@ -8,10 +8,15 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="DesertLayer"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+run/main_scene="uid://dg4g573d1n0c3"
+config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [rendering]
