@@ -4,7 +4,7 @@ const SPEED = 25
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
-@onready var d_sound = $"../../Music/Died_Sound"
+#@onready var d_sound = $"../../Music/Died_Sound"
 var direction = 1 # standardmäßig nach rechts
 
 func _process(delta: float) -> void:
