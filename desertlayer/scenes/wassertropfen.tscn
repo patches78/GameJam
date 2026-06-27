@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cix7lug7rrb6d" path="res://assets/other/Wassertropfen.png" id="1_5tay5"]
 [ext_resource type="Script" uid="uid://lqc6q75ssjoh" path="res://scripts/wassertropfen.gd" id="1_6n15r"]
+[ext_resource type="AudioStream" uid="uid://bnu6m30lb5av5" path="res://assets/brackeys/sounds/coin.wav" id="3_xm8ly"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
 radius = 5.0
@@ -17,5 +18,8 @@ texture = ExtResource("1_5tay5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1214171819]
 shape = SubResource("CapsuleShape2D_g4v7s")
+
+[node name="Water_Sound" type="AudioStreamPlayer2D" parent="." unique_id=1893881389]
+stream = ExtResource("3_xm8ly")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

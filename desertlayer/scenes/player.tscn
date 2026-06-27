@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://xbr11d3dn4l3" path="res://scripts/player.gd" id="1_tnfkk"]
 [ext_resource type="Texture2D" uid="uid://d1e25qdgo3ps0" path="res://assets/ninja/Actor/Characters/Sultan/SpriteSheet.png" id="2_gdr2s"]
+[ext_resource type="AudioStream" uid="uid://cvq7dwliurpvr" path="res://assets/brackeys/sounds/Jump_Sound.wav" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("2_gdr2s")
@@ -151,3 +152,7 @@ animation = &"idle"
 position = Vector2(-4, 6)
 scale = Vector2(1.6875, 1.625)
 shape = SubResource("CapsuleShape2D_dxsdv")
+
+[node name="Jump_Sound" type="AudioStreamPlayer2D" parent="." unique_id=952646380]
+stream = ExtResource("3_qhqgy")
+volume_db = -7.895
