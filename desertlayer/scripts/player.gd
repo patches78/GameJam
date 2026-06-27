@@ -49,5 +49,5 @@ func getHydrated() -> void:
 	pass
 
 func _process(delta: float) -> void:
-	if(curWater > 0): curWater = curWater-1
+	if(curWater > 0): curWater = curWater-0.1
 	pass
