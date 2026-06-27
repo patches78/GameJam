@@ -26,14 +26,12 @@ func _on_killbox_body_entered(body) -> void:
 	# print zum bst von body-names
 	#print(body.name)
 	if (body.name == "Player"):
-		d_sound.play()
-		print("You died. Respawn.")
+		#d_sound.play()
+		print("Du trocknest aus.")
+		#Todo: fehlt noch Rest
 
 		#var y_delta = position.y - body.position.y
 		#var x_delta = body.position.x - position.x
 		#if(y_delta > 0):
 		#	print("Destroy enemy")
 		#	queue_free()
-		# Problem: reload wird augeführt, bevor die play-func vom Sound abgespielt wird -> lass Game warten
-		await get_tree().create_timer(GlobalGameManager.death_timeout).timeout
-		get_tree().change_scene_to_file("res://scenes/died.tscn")
