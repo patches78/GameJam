@@ -4,3 +4,4 @@ extends Node
 var death_timeout = 0.25
 var win_timeout = 0.5
 var current_level_path = "" #stores the level the player is currently playing
+var cam_pos = 0
