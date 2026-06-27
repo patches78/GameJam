@@ -7,7 +7,7 @@ func _ready() -> void:
 	limit_left = -576
 	limit_right = 1750
 	limit_top = -750
-	limit_bottom = 115
+	limit_bottom = 1500
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://eaux7t3nblk5"]
+
+[ext_resource type="Script" uid="uid://kltntl7ltyt1" path="res://scripts/hydrationmeter.gd" id="1_grpo4"]
+
+[node name="HydrationMeter" type="Node2D" unique_id=1909492495]
+script = ExtResource("1_grpo4")
