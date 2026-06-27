@@ -6,6 +6,7 @@ extends CanvasLayer
 # init mit 0 / {max_coins}
 func _ready() -> void:
 	$Feedback_Coins.text = "Coins collected: 0 / " + str(game_manger.max_coins)
+	
 
 func _process(_delta):
 	update_amount_coins(game_manger.score,game_manger.max_coins)
