@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://xbr11d3dn4l3" path="res://scripts/player.gd" id="1_tnfkk"]
 [ext_resource type="Texture2D" uid="uid://d1e25qdgo3ps0" path="res://assets/ninja/Actor/Characters/Sultan/SpriteSheet.png" id="2_gdr2s"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
+atlas = ExtResource("2_gdr2s")
+region = Rect2(0, 96, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_w58xb"]
 atlas = ExtResource("2_gdr2s")
 region = Rect2(32, 0, 16, 16)
@@ -39,6 +43,10 @@ region = Rect2(48, 48, 16, 16)
 atlas = ExtResource("2_gdr2s")
 region = Rect2(0, 32, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("2_gdr2s")
+region = Rect2(0, 80, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_6kmi0"]
 atlas = ExtResource("2_gdr2s")
 region = Rect2(32, 80, 16, 16)
@@ -49,6 +57,14 @@ region = Rect2(48, 80, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_60q6w"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2els")
+}],
+"loop": 1,
+"name": &"dead",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w58xb")
@@ -93,6 +109,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}],
+"loop": 1,
+"name": &"jump_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_6kmi0")
 }],
 "loop": 1,
@@ -110,7 +134,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dxsdv"]
 radius = 4.14815
-height = 8.61539
+height = 9.846154
 
 [node name="Player" type="CharacterBody2D" unique_id=1494382934]
 collision_layer = 2

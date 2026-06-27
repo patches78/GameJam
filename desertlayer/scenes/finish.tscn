@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b3pqa7a1xkie4"]
+
+[ext_resource type="Texture2D" uid="uid://b0motk7h0rgt0" path="res://assets/brackeys/sprites/world_tileset.png" id="1_5nbog"]
+[ext_resource type="Script" uid="uid://5hxtjf4i5rqv" path="res://scripts/finish_level1.gd" id="1_07gpw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrivr"]
+radius = 5.0
+height = 16.0
+
+[node name="FinishZone" type="Area2D" unique_id=1123434332]
+collision_mask = 2
+script = ExtResource("1_07gpw")
+
+[node name="PalmTree" type="Sprite2D" parent="." unique_id=658254422]
+texture = ExtResource("1_5nbog")
+region_enabled = true
+region_rect = Rect2(32, 72, 48, 56)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=348661448]
+position = Vector2(1, -2)
+shape = SubResource("CapsuleShape2D_xrivr")

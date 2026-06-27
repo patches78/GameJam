@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var d_sound = $"../Music/Died_Sound"
+#@onready var d_sound = $"../Music/Died_Sound"
 # cast erzeugt Typumwandlungsfehler -> deshalb manuell überprüfen
 func _on_body_entered(body) -> void:
 	if (body.name == "Player"):

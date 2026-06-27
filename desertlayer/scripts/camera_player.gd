@@ -5,7 +5,7 @@ extends Camera2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	limit_left = -600
-	limit_right = 800
+	limit_right = 850
 	limit_top = -750
 	limit_bottom = 0
 
