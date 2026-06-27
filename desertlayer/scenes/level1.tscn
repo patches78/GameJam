@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://b824bfltnrj2q"]
+[gd_scene format=4 uid="uid://b824bfltnrj2q"]
 
 [ext_resource type="Script" path="res://scripts/camera_player.gd" id="1_h0nx4"]
 [ext_resource type="Texture2D" uid="uid://b0motk7h0rgt0" path="res://assets/brackeys/sprites/world_tileset.png" id="2_rekfg"]
