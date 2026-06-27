@@ -1,6 +1,7 @@
 extends Camera2D
 
 @onready var player = $"../Player"
+
 var pos
 
 # Called when the node enters the scene tree for the first time.
@@ -18,6 +19,10 @@ func _process(_delta: float) -> void:
 	# begrenzen
 	pos.x = clamp(pos.x, limit_left, limit_right)
 	pos.y = clamp(pos.y, limit_top, limit_bottom)
-
 	#print("cameraPos: ",camera_pos)
 	global_position = pos
+	print("Global_pos: ",position)
+	GlobalManager.cam_pos = position
+
+	
+	

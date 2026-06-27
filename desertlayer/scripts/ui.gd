@@ -2,8 +2,6 @@ extends CanvasLayer
 
 @onready var camera_player: Camera2D = $"../CameraPlayer"
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	set_custom_viewport(camera_player)
