@@ -1,24 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnluki542ne4d"]
+[gd_scene format=3 uid="uid://cnluki542ne4d"]
 
-[ext_resource type="Script" path="res://scripts/died.gd" id="1_cf0ua"]
+[ext_resource type="Script" uid="uid://bhd5gkwlfh8eb" path="res://scripts/died.gd" id="1_cf0ua"]
 [ext_resource type="FontFile" uid="uid://dqc7latk2up7d" path="res://assets/brackeys/fonts/PixelOperator8-Bold.ttf" id="2_4qg2q"]
+[ext_resource type="Texture2D" uid="uid://bovtvntnv1pl3" path="res://assets/background/you-died.jpg" id="2_mubft"]
+[ext_resource type="Texture2D" uid="uid://b0cmaid4noswq" path="res://assets/background/Skull_new.png" id="3_mr4x7"]
 [ext_resource type="FontFile" uid="uid://bpqecwh8kr7yx" path="res://assets/brackeys/fonts/PixelOperator8.ttf" id="3_ssa0x"]
+[ext_resource type="AudioStream" uid="uid://b6uidaqfhoxib" path="res://assets/brackeys/music/Died_Sound.ogg" id="6_p88vf"]
 
-[node name="Died" type="Node2D"]
+[node name="Died" type="Node2D" unique_id=1564110728]
 script = ExtResource("1_cf0ua")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=316098760]
 
-[node name="Blackscreen" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=915617820]
+position = Vector2(576.99994, 324.5)
+scale = Vector2(1.5540539, 1.3448275)
+texture = ExtResource("2_mubft")
 
-[node name="YouDied" type="Label" parent="CanvasLayer"]
+[node name="Skull" type="Sprite2D" parent="CanvasLayer/Sprite2D" unique_id=1667605268]
+position = Vector2(-111.965195, -120.08976)
+scale = Vector2(0.08774727, 0.090132)
+texture = ExtResource("3_mr4x7")
+
+[node name="YouDied" type="Label" parent="CanvasLayer" unique_id=1420110322]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -34,18 +38,22 @@ theme_override_fonts/font = ExtResource("2_4qg2q")
 theme_override_font_sizes/font_size = 50
 text = "You Died"
 
-[node name="RespawnHint" type="Label" parent="CanvasLayer"]
+[node name="RespawnHint" type="Label" parent="CanvasLayer" unique_id=1966507741]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -209.0
-offset_top = -206.0
-offset_right = 209.0
-offset_bottom = -183.0
+offset_left = -203.0
+offset_top = -284.0
+offset_right = 215.0
+offset_bottom = -261.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_ssa0x")
 theme_override_font_sizes/font_size = 20
 text = "Click \"Enter\" for respawn."
+
+[node name="Died_Sound" type="AudioStreamPlayer2D" parent="." unique_id=84254731]
+stream = ExtResource("6_p88vf")
+autoplay = true
