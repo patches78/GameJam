@@ -1,51 +1,58 @@
-[gd_scene load_steps=4 format=3 uid="uid://bufecg8v3s3lm"]
+[gd_scene format=3 uid="uid://bufecg8v3s3lm"]
 
-[ext_resource type="Script" path="res://scripts/won.gd" id="1_it6lj"]
+[ext_resource type="Script" uid="uid://b8sutr415ghdj" path="res://scripts/won.gd" id="1_it6lj"]
+[ext_resource type="Texture2D" uid="uid://be4f1ga7616n4" path="res://assets/background/background.webp" id="2_kg3bq"]
 [ext_resource type="FontFile" uid="uid://dqc7latk2up7d" path="res://assets/brackeys/fonts/PixelOperator8-Bold.ttf" id="2_lhf1p"]
 [ext_resource type="FontFile" uid="uid://bpqecwh8kr7yx" path="res://assets/brackeys/fonts/PixelOperator8.ttf" id="3_2gpfc"]
+[ext_resource type="Texture2D" uid="uid://otfsqh2e1o88" path="res://assets/background/skull.png" id="3_u5o4t"]
+[ext_resource type="AudioStream" uid="uid://c8ouikybvigs0" path="res://assets/brackeys/music/won.ogg" id="6_u5o4t"]
 
-[node name="Won" type="Node2D"]
+[node name="Won" type="Node2D" unique_id=1598292399]
 script = ExtResource("1_it6lj")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=79950973]
 
-[node name="Bluescreen" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-color = Color(0.0156863, 0.741176, 0.768627, 1)
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1652843715]
+position = Vector2(623, 342.25)
+scale = Vector2(0.90922403, 0.89401823)
+texture = ExtResource("2_kg3bq")
 
-[node name="YouWon" type="Label" parent="CanvasLayer"]
+[node name="Skull" type="Sprite2D" parent="CanvasLayer/Sprite2D" unique_id=932181250]
+position = Vector2(-373.94528, -244.12256)
+scale = Vector2(0.5411127, 0.58072954)
+texture = ExtResource("3_u5o4t")
+
+[node name="YouWon" type="Label" parent="CanvasLayer" unique_id=1482566534]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -181.5
-offset_top = -25.5
-offset_right = 181.5
-offset_bottom = 25.5
+offset_left = -170.0
+offset_top = -59.0
+offset_right = 193.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_lhf1p")
 theme_override_font_sizes/font_size = 50
 text = "You Won"
 
-[node name="QuitHint" type="Label" parent="CanvasLayer"]
+[node name="QuitHint" type="Label" parent="CanvasLayer" unique_id=1226776954]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -209.0
-offset_top = -206.0
-offset_right = 209.0
-offset_bottom = -183.0
+offset_left = -204.0
+offset_top = -312.0
+offset_right = 214.0
+offset_bottom = -289.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_2gpfc")
 theme_override_font_sizes/font_size = 20
 text = "Click \"Enter\" for quitting."
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1983984520]
+stream = ExtResource("6_u5o4t")

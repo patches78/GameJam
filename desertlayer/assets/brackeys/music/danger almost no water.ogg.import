@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://coej8a8fa0wg0"
+path="res://.godot/imported/danger almost no water.ogg-c1d49a7be031b3112f8ff868323266cc.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/brackeys/music/danger almost no water.ogg"
+dest_files=["res://.godot/imported/danger almost no water.ogg-c1d49a7be031b3112f8ff868323266cc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

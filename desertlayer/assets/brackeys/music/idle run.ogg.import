@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bsgnbf2rt4u6q"
+path="res://.godot/imported/idle run.ogg-165d549ae630b0bd1a83e2b91ec7d0fd.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/brackeys/music/idle run.ogg"
+dest_files=["res://.godot/imported/idle run.ogg-165d549ae630b0bd1a83e2b91ec7d0fd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
