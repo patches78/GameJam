@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://c2dimlmr5v7db" path="res://scenes/player.tscn" id="5_412rr"]
 [ext_resource type="Texture2D" uid="uid://b0cmaid4noswq" path="res://assets/background/Skull_new.png" id="7_7g1mn"]
 [ext_resource type="PackedScene" uid="uid://0uhgis3ssxr0" path="res://scenes/ui.tscn" id="8_bbk5w"]
-[ext_resource type="PackedScene" uid="uid://dg4g573d1n0c3" path="res://scenes/wassertropfen.tscn" id="9_conm7"]
 [ext_resource type="PackedScene" uid="uid://6puyqda0iq0k" path="res://scenes/npcs/enemy_vulture.tscn" id="9_conm7"]
 [ext_resource type="PackedScene" uid="uid://b3pqa7a1xkie4" path="res://scenes/finish.tscn" id="10_d3jkd"]
+[ext_resource type="PackedScene" uid="uid://dnv3x5j5h1oaa" path="res://scenes/wassertropfen.tscn" id="12_2ku1j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37l40"]
 texture = ExtResource("2_rekfg")
@@ -290,24 +290,6 @@ transform = Transform2D(1, 0, 0, 1, 0, -400)
 follow_viewport_enabled = true
 follow_viewport_scale = 1.2
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=135959278]
-motion_scale = Vector2(0.2, 0.2)
-
-[node name="Desert" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=502725329]
-position = Vector2(78.55, 22.8)
-scale = Vector2(1.11486, 1.05904)
-texture = ExtResource("6_bnxxu")
-
-[node name="Skull" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=439138234]
-position = Vector2(-338, -236)
-scale = Vector2(0.136364, 0.121212)
-texture = ExtResource("7_7g1mn")
-
-[node name="UI" parent="." unique_id=1980821094 instance=ExtResource("8_bbk5w")]
-layer = 0
-
-[node name="Wassertropfen" parent="." unique_id=1587811656 instance=ExtResource("9_conm7")]
-position = Vector2(-279, -233)
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=310783995]
 motion_scale = Vector2(0.2, 0.2)
 
@@ -349,6 +331,11 @@ script = ExtResource("4_m1t5a")
 
 [node name="Finish" parent="." unique_id=393112082 instance=ExtResource("10_d3jkd")]
 position = Vector2(772, -236)
+
+[node name="UI" parent="." unique_id=1980821094 instance=ExtResource("8_bbk5w")]
+
+[node name="Wassertropfen" parent="." unique_id=1587811656 instance=ExtResource("12_2ku1j")]
+position = Vector2(326, -139)
 
 [connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]
 [connection signal="body_entered" from="Finish" to="Finish" method="_on_body_entered"]

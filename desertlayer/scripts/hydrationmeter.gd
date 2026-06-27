@@ -12,7 +12,7 @@ var watermeterForeGround
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	frac = player.curWater / player.maxWater
-	watermeterBackGround = Rect2(0, 0, 102.0, 16.0)
+	watermeterBackGround = Rect2(0, 0, 0, 0)
 	watermeterForeGround = Rect2(0 + 1, 0 + 1, 100.0 * frac, 14.0)
 	pass # Replace with function body.
 
