@@ -4,10 +4,10 @@ extends Camera2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	limit_left = -576
+	limit_left = -600
 	limit_right = 1750
-	limit_top = -750
-	limit_bottom = 115
+	limit_top = -900
+	limit_bottom = 250
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

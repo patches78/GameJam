@@ -19,6 +19,8 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.play("jump_right") # jump & move right
 		elif direction < 0:
 			animated_sprite.play("jump_left") # jump & move left
+		else:
+			animated_sprite.play("jump_idle") # jump
 	else:
 		if direction > 0:
 			animated_sprite.play("go_right") # !jump & move right

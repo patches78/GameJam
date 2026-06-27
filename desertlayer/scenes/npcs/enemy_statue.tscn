@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bqfawyax1gqt6"]
+[gd_scene load_steps=17 format=3 uid="uid://clr6jltc7v7cd"]
 
 [ext_resource type="Script" path="res://scripts/enemy_ground.gd" id="1_6xiyb"]
 [ext_resource type="Texture2D" uid="uid://wh2ob3dtrqk2" path="res://assets/ninja/Actor/Characters/Statue/SpriteSheet.png" id="2_b2ut5"]

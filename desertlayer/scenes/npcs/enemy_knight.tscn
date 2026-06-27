@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://36h30mn32q5l"]
+[gd_scene load_steps=17 format=3 uid="uid://b0xjudot6kpeu"]
 
 [ext_resource type="Script" path="res://scripts/enemy_ground.gd" id="1_3jjco"]
 [ext_resource type="Texture2D" uid="uid://xfk7t6oqr0y7" path="res://assets/ninja/Actor/Characters/KnightGold/SeparateAnim/Dead.png" id="2_5xem2"]
