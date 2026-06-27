@@ -21,8 +21,5 @@ func _process(_delta: float) -> void:
 	pos.y = clamp(pos.y, limit_top, limit_bottom)
 	#print("cameraPos: ",camera_pos)
 	global_position = pos
-	print("Global_pos: ",position)
-	GlobalManager.cam_pos = position
-
 	
 	
