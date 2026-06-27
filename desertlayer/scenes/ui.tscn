@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://0uhgis3ssxr0"]
+
+[ext_resource type="Script" uid="uid://uddurwgia3xw" path="res://scripts/ui.gd" id="1_yev5y"]
+[ext_resource type="PackedScene" uid="uid://eaux7t3nblk5" path="res://scenes/hydration_meter.tscn" id="2_61cnf"]
+
+[node name="UI" type="CanvasLayer" unique_id=1980821094]
+follow_viewport_enabled = true
+script = ExtResource("1_yev5y")
+
+[node name="HydrationMeter" parent="." unique_id=1909492495 instance=ExtResource("2_61cnf")]
+position = Vector2(26, 2)
