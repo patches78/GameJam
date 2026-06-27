@@ -54,5 +54,5 @@ theme_override_fonts/font = ExtResource("3_2gpfc")
 theme_override_font_sizes/font_size = 20
 text = "Click \"Enter\" for quitting."
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1983984520]
+[node name="Won_Sound" type="AudioStreamPlayer2D" parent="." unique_id=1983984520]
 stream = ExtResource("6_u5o4t")
