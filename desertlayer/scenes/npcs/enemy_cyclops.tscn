@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bqfawyax1gqt6"]
+[gd_scene format=3 uid="uid://bqfawyax1gqt6"]
 
 [ext_resource type="Script" path="res://scripts/enemy_ground.gd" id="1_0o75s"]
 [ext_resource type="Texture2D" uid="uid://cejovvgadnpfr" path="res://assets/ninja/Actor/Monsters/Cyclope/SpriteSheet.png" id="1_y0tnb"]
