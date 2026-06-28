@@ -357,6 +357,10 @@ script = ExtResource("9_e40mx")
 position = Vector2(1332, -64)
 script = ExtResource("9_e40mx")
 
+[node name="Knight3" parent="Enemies" unique_id=65857952 instance=ExtResource("8_x008a")]
+position = Vector2(222, -431)
+script = ExtResource("9_e40mx")
+
 [node name="GameManager" type="Node" parent="." unique_id=1946624181]
 
 [node name="Killzone" parent="." unique_id=941245091 instance=ExtResource("9_atr84")]
