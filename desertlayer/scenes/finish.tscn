@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3pqa7a1xkie4"]
 
 [ext_resource type="Texture2D" uid="uid://b0motk7h0rgt0" path="res://assets/brackeys/sprites/world_tileset.png" id="1_5nbog"]
-[ext_resource type="Script" uid="uid://5hxtjf4i5rqv" path="res://scripts/finish_level1.gd" id="1_07gpw"]
+[ext_resource type="Script" uid="uid://5hxtjf4i5rqv" path="res://scripts/finish_level3.gd" id="1_07gpw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrivr"]
 radius = 5.0

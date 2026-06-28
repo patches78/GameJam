@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var player: CharacterBody2D = $"../../Player"
+
 const SPEED = 25
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var ray_cast_right: RayCast2D = $RayCastRight
@@ -28,6 +30,7 @@ func _process(delta: float) -> void:
 	position.x += direction * delta * SPEED # n pixel pro frame
 
 	move_and_slide() # sonst fktiert die gravity nicht
+
 
 func _on_killbox_body_entered(body) -> void:
 	# print zum bst von body-names
