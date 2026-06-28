@@ -53,6 +53,10 @@ func getHydrated() -> void:
 	curWater = maxWater
 	pass
 
-func _process(delta: float) -> void:
+func getDrained() -> void:
+	curWater -= GlobalManager.drain
+	pass
+
+func _process(_delta) -> void:
 	if(curWater > 0): curWater = curWater-0.1
 	pass

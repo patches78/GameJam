@@ -23,7 +23,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	frac = player.curWater / player.maxWater
 	
+	# Box allg
 	watermeterBackGround = Rect2(player.position.x-offset_x, player.position.y-offset_y, 102.0, 16.0)
+	# Wasserstand
 	watermeterForeGround = Rect2(player.position.x-offset_x, player.position.y-offset_y, 100.0 * frac, 16.0)
 	queue_redraw()
 	pass
