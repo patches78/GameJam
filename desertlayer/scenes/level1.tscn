@@ -8,10 +8,13 @@
 [ext_resource type="Script" uid="uid://cnu3ikavblwi" path="res://scripts/killzone.gd" id="4_m1t5a"]
 [ext_resource type="PackedScene" uid="uid://c2dimlmr5v7db" path="res://scenes/player.tscn" id="5_412rr"]
 [ext_resource type="Texture2D" uid="uid://b0cmaid4noswq" path="res://assets/background/Skull_new.png" id="7_7g1mn"]
+[ext_resource type="Script" uid="uid://hy4b6yu4qed7" path="res://scripts/color_rect.gd" id="7_f31uk"]
 [ext_resource type="PackedScene" uid="uid://0uhgis3ssxr0" path="res://scenes/ui.tscn" id="8_bbk5w"]
 [ext_resource type="PackedScene" uid="uid://6puyqda0iq0k" path="res://scenes/npcs/enemy_vulture.tscn" id="9_conm7"]
 [ext_resource type="PackedScene" uid="uid://b3pqa7a1xkie4" path="res://scenes/finish.tscn" id="10_d3jkd"]
-[ext_resource type="PackedScene" uid="uid://dg4g573d1n0c3" path="res://scenes/wassertropfen.tscn" id="12_2ku1j"]
+[ext_resource type="PackedScene" uid="uid://clr6jltc7v7cd" path="res://scenes/npcs/enemy_statue.tscn" id="10_i8kv5"]
+[ext_resource type="FontFile" uid="uid://bpqecwh8kr7yx" path="res://assets/brackeys/fonts/PixelOperator8.ttf" id="12_2ku1j"]
+[ext_resource type="PackedScene" uid="uid://dg4g573d1n0c3" path="res://scenes/wassertropfen.tscn" id="14_gnai3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37l40"]
 texture = ExtResource("2_rekfg")
@@ -42,6 +45,7 @@ texture = ExtResource("2_rekfg")
 5:0/0/terrain_set = 0
 5:0/0/terrain = 1
 5:0/0/probability = 0.025
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:0/0/terrains_peering_bit/right_side = 1
 5:0/0/terrains_peering_bit/bottom_right_corner = 1
 5:0/0/terrains_peering_bit/bottom_side = 1
@@ -99,6 +103,7 @@ texture = ExtResource("2_rekfg")
 4:1/0 = 0
 4:1/0/terrain_set = 0
 4:1/0/terrain = 1
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:1/0/terrains_peering_bit/right_side = 1
 4:1/0/terrains_peering_bit/bottom_right_corner = 1
 4:1/0/terrains_peering_bit/bottom_side = 1
@@ -111,6 +116,7 @@ texture = ExtResource("2_rekfg")
 5:1/0/terrain_set = 0
 5:1/0/terrain = 1
 5:1/0/probability = 0.025
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:1/0/terrains_peering_bit/right_side = 1
 5:1/0/terrains_peering_bit/bottom_right_corner = 1
 5:1/0/terrains_peering_bit/bottom_side = 1
@@ -125,16 +131,18 @@ texture = ExtResource("2_rekfg")
 9:1/0 = 0
 9:1/0/terrain_set = 0
 9:1/0/terrain = 2
-9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -5.33333, 8, 0, -8, -2.66667)
 9:1/0/terrains_peering_bit/right_side = 2
 10:1/0 = 0
 10:1/0/terrain_set = 0
 10:1/0/terrain = 2
+10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -5.33333, -8, -5.33333, -8, 0, 8, 0)
 10:1/0/terrains_peering_bit/right_side = 2
 10:1/0/terrains_peering_bit/left_side = 2
 11:1/0 = 0
 11:1/0/terrain_set = 0
 11:1/0/terrain = 2
+11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -5.33333, -8, 0, 8, -2.66667)
 11:1/0/terrains_peering_bit/left_side = 2
 0:2/0 = 0
 1:2/0 = 0
@@ -155,8 +163,11 @@ texture = ExtResource("2_rekfg")
 7:2/0 = 0
 8:2/0 = 0
 9:2/0 = 0
+9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -5.33333, 8, 0, -8, -2.66667)
 10:2/0 = 0
+10:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -5.33333, -8, -5.33333, -8, 0, 8, 0)
 11:2/0 = 0
+11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -5.33333, -8, 0, 8, -2.66667)
 0:3/0 = 0
 1:3/0 = 0
 2:3/0 = 0
@@ -299,6 +310,7 @@ scale = Vector2(0.926, 0.9)
 texture = ExtResource("2_bbk5w")
 
 [node name="Skull" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1899304165]
+modulate = Color(1, 1, 1, 0.27450982)
 position = Vector2(343.33334, -236.66663)
 scale = Vector2(0.14859134, 0.13769267)
 texture = ExtResource("7_7g1mn")
@@ -310,6 +322,12 @@ position = Vector2(90.85423, 850.0001)
 scale = Vector2(0.87364113, 0.92094254)
 texture = ExtResource("4_conm7")
 
+[node name="RedScreen" type="ColorRect" parent="." unique_id=388122283]
+anchors_preset = -1
+script = ExtResource("7_f31uk")
+
+[node name="UI" parent="." unique_id=1980821094 instance=ExtResource("8_bbk5w")]
+
 [node name="Player" parent="." unique_id=1577613362 instance=ExtResource("5_412rr")]
 position = Vector2(-518, -190)
 
@@ -317,12 +335,47 @@ position = Vector2(-518, -190)
 position = Vector2(-549, -266)
 script = ExtResource("1_h0nx4")
 
+[node name="GameManager" type="Node" parent="." unique_id=1946624181]
+
 [node name="Enemies" type="Node" parent="." unique_id=603794275]
 
 [node name="Vulture" parent="Enemies" unique_id=1990780615 instance=ExtResource("9_conm7")]
-position = Vector2(719, -293)
+position = Vector2(742, -273)
 
-[node name="GameManager" type="Node" parent="." unique_id=1946624181]
+[node name="Statue" parent="Enemies" unique_id=1748836592 instance=ExtResource("10_i8kv5")]
+position = Vector2(457, -144)
+
+[node name="Water" type="Node" parent="." unique_id=1380770647]
+
+[node name="Labels" type="Node" parent="." unique_id=235849386]
+
+[node name="KeyboardIntro" type="Label" parent="Labels" unique_id=945764822]
+offset_left = -543.0
+offset_top = -283.0
+offset_right = -422.0
+offset_bottom = -208.0
+theme_override_fonts/font = ExtResource("12_2ku1j")
+text = "space,W: jump
+left,A: go left
+right,D: go right"
+
+[node name="Goal" type="Label" parent="Labels" unique_id=1592713925]
+offset_left = -369.0
+offset_top = -209.0
+offset_right = 23.0
+offset_bottom = -174.0
+theme_override_fonts/font = ExtResource("12_2ku1j")
+text = "Reach the oasis 
+before you're dying of thirst!"
+
+[node name="Enemies" type="Label" parent="Labels" unique_id=356594096]
+offset_left = 252.0
+offset_top = -263.0
+offset_right = 540.0
+offset_bottom = -228.0
+theme_override_fonts/font = ExtResource("12_2ku1j")
+text = "Caution! 
+Enemies will drain you."
 
 [node name="Killzone" parent="." unique_id=941245091 instance=ExtResource("3_ic38a")]
 position = Vector2(36, 294)
@@ -332,10 +385,8 @@ script = ExtResource("4_m1t5a")
 [node name="Finish" parent="." unique_id=393112082 instance=ExtResource("10_d3jkd")]
 position = Vector2(772, -236)
 
-[node name="UI" parent="." unique_id=1980821094 instance=ExtResource("8_bbk5w")]
-
-[node name="Wassertropfen" parent="." unique_id=1587811656 instance=ExtResource("12_2ku1j")]
-position = Vector2(326, -139)
+[node name="Wassertropfen" parent="." unique_id=1587811656 instance=ExtResource("14_gnai3")]
+position = Vector2(324, -137)
 
 [connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]
 [connection signal="body_entered" from="Finish" to="Finish" method="_on_body_entered"]

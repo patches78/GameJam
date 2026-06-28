@@ -18,7 +18,8 @@ scale = Vector2(1.5540539, 1.3448275)
 texture = ExtResource("2_mubft")
 
 [node name="Skull" type="Sprite2D" parent="CanvasLayer/Sprite2D" unique_id=1667605268]
-position = Vector2(-111.965195, -120.08976)
+modulate = Color(1, 1, 1, 0.3137255)
+position = Vector2(-102.31152, -120.833496)
 scale = Vector2(0.08774727, 0.090132)
 texture = ExtResource("3_mr4x7")
 

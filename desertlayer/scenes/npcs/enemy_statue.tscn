@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clr6jltc7v7cd"]
 
-[ext_resource type="Script" path="res://scripts/enemy_ground.gd" id="1_6xiyb"]
+[ext_resource type="Script" uid="uid://rlau8kdtrrdk" path="res://scripts/enemy_ground.gd" id="1_6xiyb"]
 [ext_resource type="Texture2D" uid="uid://wh2ob3dtrqk2" path="res://assets/ninja/Actor/Characters/Statue/SpriteSheet.png" id="2_b2ut5"]
 [ext_resource type="Texture2D" uid="uid://ctgyerkwa1bju" path="res://assets/ninja/Actor/Characters/Statue/SeparateAnim/Dead.png" id="2_pxds4"]
 
@@ -50,7 +50,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lqx1k")
 }],
-"loop": true,
+"loop": 1,
 "name": &"died",
 "speed": 5.0
 }, {
@@ -67,7 +67,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_232h3")
 }],
-"loop": true,
+"loop": 1,
 "name": &"go_left",
 "speed": 5.0
 }, {
@@ -84,7 +84,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7ufph")
 }],
-"loop": true,
+"loop": 1,
 "name": &"go_right",
 "speed": 5.0
 }, {
@@ -92,7 +92,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4ejv6")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 5.0
 }]
@@ -104,42 +104,42 @@ size = Vector2(12, 16)
 radius = 7.0
 height = 18.0
 
-[node name="Statue" type="CharacterBody2D"]
+[node name="Statue" type="CharacterBody2D" unique_id=1664230118]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_6xiyb")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=362100735]
 position = Vector2(-4.25, 5)
 scale = Vector2(1.156, 1.156)
 sprite_frames = SubResource("SpriteFrames_eu5c7")
-animation = &"died"
+animation = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=563545555]
 position = Vector2(-4, 6)
 shape = SubResource("RectangleShape2D_rqs46")
 
-[node name="Killbox" type="Area2D" parent="."]
+[node name="Killbox" type="Area2D" parent="." unique_id=536754588]
 collision_layer = 4
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox" unique_id=1100299013]
 position = Vector2(-4, 6)
 shape = SubResource("CapsuleShape2D_5yd6u")
 
-[node name="RayCastRight" type="RayCast2D" parent="."]
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=1793324636]
 position = Vector2(-4, 7)
 target_position = Vector2(13, 0)
 
-[node name="RayCastLeft" type="RayCast2D" parent="."]
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=965250742]
 position = Vector2(-4, 7)
 target_position = Vector2(-13, 0)
 
-[node name="RayCastDownLeft" type="RayCast2D" parent="."]
+[node name="RayCastDownLeft" type="RayCast2D" parent="." unique_id=134400606]
 position = Vector2(-16, 7)
 target_position = Vector2(0, 13)
 
-[node name="RayCastDownRight" type="RayCast2D" parent="."]
+[node name="RayCastDownRight" type="RayCast2D" parent="." unique_id=2107552271]
 position = Vector2(8, 7)
 target_position = Vector2(0, 13)
 
