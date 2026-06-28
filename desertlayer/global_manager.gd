@@ -5,3 +5,6 @@ var death_timeout = 0.25
 var win_timeout = 0.5
 var death_thirst_timeout = 2 
 var current_level_path = "" #stores the level the player is currently playing
+var zoom_accleration = 0.00005
+var transp_accleration = 0.4 #0.000008
+var drain = 10

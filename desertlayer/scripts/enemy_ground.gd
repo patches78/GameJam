@@ -9,6 +9,9 @@ const SPEED = 25
 #@onready var d_sound = $"../../Music/Died_Sound"
 var direction = 1 # standardmäßig nach rechts
 
+func _ready() -> void:
+	animated_sprite.play("go_right")
+
 func _process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -32,7 +35,7 @@ func _on_killbox_body_entered(body) -> void:
 	if (body.name == "Player"):
 		#d_sound.play()
 		print("Du trocknest aus.")
-		#Todo: fehlt noch Rest
+		body.getDrained()
 		
 		#var y_delta = position.y - body.position.y
 		#var x_delta = body.position.x - position.x
