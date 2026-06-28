@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dg4g573d1n0c3" path="res://scenes/wassertropfen.tscn" id="12_y6lc1"]
 [ext_resource type="PackedScene" uid="uid://cf0hptvyn3o6j" path="res://scenes/water_bottle.tscn" id="13_ve5ok"]
 [ext_resource type="PackedScene" uid="uid://b5bn362os76c5" path="res://scenes/cactus.tscn" id="14_cleqw"]
+[ext_resource type="AudioStream" uid="uid://dwke4xemw51hs" path="res://assets/brackeys/music/playlistsons-wild-west-466301.mp3" id="15_cleqw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37l40"]
 texture = ExtResource("1_8g4ke")
@@ -551,6 +552,11 @@ position = Vector2(2196, -430)
 
 [node name="Cactus3" parent="Cacti" unique_id=678524455 instance=ExtResource("14_cleqw")]
 position = Vector2(403, -565)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=482600731]
+stream = ExtResource("15_cleqw")
+volume_db = -9.309
+autoplay = true
 
 [connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]
 [connection signal="body_entered" from="Finish" to="Finish" method="_on_body_entered"]
