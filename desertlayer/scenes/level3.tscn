@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://dscutsch2t2qc" path="res://assets/background/Desert.jpeg" id="2_e40mx"]
 [ext_resource type="Texture2D" uid="uid://b0cmaid4noswq" path="res://assets/background/Skull_new.png" id="3_a114e"]
 [ext_resource type="Texture2D" uid="uid://44lpuwlbuwom" path="res://assets/background/Desert_Stone.jpeg" id="4_y1e0c"]
+[ext_resource type="Script" uid="uid://hy4b6yu4qed7" path="res://scripts/color_rect.gd" id="5_a114e"]
 [ext_resource type="Script" uid="uid://dsdydt2xb40ta" path="res://scripts/camera_player_level3.gd" id="5_got4s"]
 [ext_resource type="PackedScene" uid="uid://c2dimlmr5v7db" path="res://scenes/player.tscn" id="6_07lh1"]
 [ext_resource type="PackedScene" uid="uid://6puyqda0iq0k" path="res://scenes/npcs/enemy_vulture.tscn" id="7_6uuvf"]
 [ext_resource type="PackedScene" uid="uid://b0xjudot6kpeu" path="res://scenes/npcs/enemy_knight.tscn" id="8_x008a"]
 [ext_resource type="PackedScene" uid="uid://bot0jglnu414v" path="res://scenes/killzone.tscn" id="9_atr84"]
-[ext_resource type="Script" uid="uid://b18rsskjuhaix" path="res://scripts/enemy_ground_level3.gd" id="9_e40mx"]
 [ext_resource type="Script" uid="uid://cnu3ikavblwi" path="res://scripts/killzone.gd" id="10_qyu38"]
 [ext_resource type="PackedScene" uid="uid://b3pqa7a1xkie4" path="res://scenes/finish.tscn" id="11_8vbrh"]
 [ext_resource type="PackedScene" uid="uid://0uhgis3ssxr0" path="res://scenes/ui.tscn" id="12_d5gix"]
@@ -314,6 +314,7 @@ scale = Vector2(0.926, 0.9)
 texture = ExtResource("2_e40mx")
 
 [node name="Skull" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1899304165]
+modulate = Color(1, 1, 1, 0.3137255)
 position = Vector2(343.33334, -236.66663)
 scale = Vector2(0.14859134, 0.13769267)
 texture = ExtResource("3_a114e")
@@ -335,6 +336,10 @@ position = Vector2(2564.1665, 850.0001)
 scale = Vector2(0.87364113, 0.92094254)
 texture = ExtResource("4_y1e0c")
 
+[node name="RedScreen" type="ColorRect" parent="." unique_id=1979571358]
+anchors_preset = -1
+script = ExtResource("5_a114e")
+
 [node name="CameraPlayer" type="Camera2D" parent="." unique_id=1000112521]
 position = Vector2(-549, -266)
 script = ExtResource("5_got4s")
@@ -352,15 +357,12 @@ position = Vector2(1740, -178)
 
 [node name="Knight" parent="Enemies" unique_id=15397179 instance=ExtResource("8_x008a")]
 position = Vector2(632, 95)
-script = ExtResource("9_e40mx")
 
 [node name="Knight2" parent="Enemies" unique_id=355816739 instance=ExtResource("8_x008a")]
 position = Vector2(1332, -64)
-script = ExtResource("9_e40mx")
 
 [node name="Knight3" parent="Enemies" unique_id=65857952 instance=ExtResource("8_x008a")]
 position = Vector2(222, -431)
-script = ExtResource("9_e40mx")
 
 [node name="GameManager" type="Node" parent="." unique_id=1946624181]
 

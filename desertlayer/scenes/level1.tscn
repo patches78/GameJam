@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://clfn1lvw1pgdj"]
+[gd_scene format=4 uid="uid://b824bfltnrj2q"]
 
 [ext_resource type="Script" uid="uid://cp28q22eydf44" path="res://scripts/camera_player.gd" id="1_h0nx4"]
 [ext_resource type="Texture2D" uid="uid://dscutsch2t2qc" path="res://assets/background/Desert.jpeg" id="2_bbk5w"]
@@ -384,7 +384,6 @@ script = ExtResource("4_m1t5a")
 
 [node name="Finish" parent="." unique_id=393112082 instance=ExtResource("10_d3jkd")]
 position = Vector2(772, -236)
-nextscene = "level2.tscn"
 
 [node name="Wassertropfen" parent="." unique_id=1587811656 instance=ExtResource("14_gnai3")]
 position = Vector2(324, -137)
