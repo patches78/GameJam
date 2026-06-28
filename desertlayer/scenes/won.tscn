@@ -56,3 +56,4 @@ text = "Click \"Enter\" for quitting."
 
 [node name="Won_Sound" type="AudioStreamPlayer2D" parent="." unique_id=1983984520]
 stream = ExtResource("6_u5o4t")
+autoplay = true
