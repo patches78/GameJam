@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://0uhgis3ssxr0" path="res://scenes/ui.tscn" id="12_d5gix"]
 [ext_resource type="PackedScene" uid="uid://b5bn362os76c5" path="res://scenes/cactus.tscn" id="13_7hs6g"]
 [ext_resource type="PackedScene" uid="uid://dg4g573d1n0c3" path="res://scenes/wassertropfen.tscn" id="14_yeq8b"]
-[ext_resource type="AudioStream" uid="uid://bju71ncsq4f82" path="res://assets/brackeys/music/playlistsons-wild-west-466301.mp3" id="16_a114e"]
+[ext_resource type="AudioStream" uid="uid://dwke4xemw51hs" path="res://assets/brackeys/music/playlistsons-wild-west-466301.mp3" id="16_a114e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37l40"]
 texture = ExtResource("1_got4s")
@@ -373,7 +373,6 @@ script = ExtResource("10_qyu38")
 
 [node name="Finish" parent="." unique_id=393112082 instance=ExtResource("11_8vbrh")]
 position = Vector2(2196, -188)
-nextscene = "won.tscn"
 
 [node name="UI" parent="." unique_id=1980821094 instance=ExtResource("12_d5gix")]
 

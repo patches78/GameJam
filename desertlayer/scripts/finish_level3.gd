@@ -1,5 +1,5 @@
 extends Area2D
-@export var nextscene: String = "level3.tscn"
+@export var nextscene: String = "won.tscn"
 #@onready var w_sound = $"../Music/Win_Sound"
 
 func _on_body_entered(body) -> void:
