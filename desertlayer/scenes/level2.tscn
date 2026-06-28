@@ -1,20 +1,20 @@
-[gd_scene format=4 uid="uid://clfn1lvw1pgdj"]
+[gd_scene format=4 uid="uid://cyex0kwi2rajs"]
 
-[ext_resource type="Script" uid="uid://cp28q22eydf44" path="res://scripts/camera_player.gd" id="1_h0nx4"]
-[ext_resource type="Texture2D" uid="uid://dscutsch2t2qc" path="res://assets/background/Desert.jpeg" id="2_bbk5w"]
-[ext_resource type="Texture2D" uid="uid://b0motk7h0rgt0" path="res://assets/brackeys/sprites/world_tileset.png" id="2_rekfg"]
-[ext_resource type="PackedScene" uid="uid://bot0jglnu414v" path="res://scenes/killzone.tscn" id="3_ic38a"]
-[ext_resource type="Texture2D" uid="uid://44lpuwlbuwom" path="res://assets/background/Desert_Stone.jpeg" id="4_conm7"]
-[ext_resource type="Script" uid="uid://cnu3ikavblwi" path="res://scripts/killzone.gd" id="4_m1t5a"]
-[ext_resource type="PackedScene" uid="uid://c2dimlmr5v7db" path="res://scenes/player.tscn" id="5_412rr"]
-[ext_resource type="Texture2D" uid="uid://b0cmaid4noswq" path="res://assets/background/Skull_new.png" id="7_7g1mn"]
-[ext_resource type="PackedScene" uid="uid://0uhgis3ssxr0" path="res://scenes/ui.tscn" id="8_bbk5w"]
-[ext_resource type="PackedScene" uid="uid://6puyqda0iq0k" path="res://scenes/npcs/enemy_vulture.tscn" id="9_conm7"]
-[ext_resource type="PackedScene" uid="uid://b3pqa7a1xkie4" path="res://scenes/finish.tscn" id="10_d3jkd"]
-[ext_resource type="PackedScene" uid="uid://dg4g573d1n0c3" path="res://scenes/wassertropfen.tscn" id="12_2ku1j"]
+[ext_resource type="Texture2D" uid="uid://b0motk7h0rgt0" path="res://assets/brackeys/sprites/world_tileset.png" id="1_8g4ke"]
+[ext_resource type="Texture2D" uid="uid://dscutsch2t2qc" path="res://assets/background/Desert.jpeg" id="2_56gwk"]
+[ext_resource type="Texture2D" uid="uid://b0cmaid4noswq" path="res://assets/background/Skull_new.png" id="3_ve5ok"]
+[ext_resource type="Texture2D" uid="uid://44lpuwlbuwom" path="res://assets/background/Desert_Stone.jpeg" id="4_cleqw"]
+[ext_resource type="PackedScene" uid="uid://c2dimlmr5v7db" path="res://scenes/player.tscn" id="5_wvb8j"]
+[ext_resource type="Script" uid="uid://cp28q22eydf44" path="res://scripts/camera_player.gd" id="6_g8vcy"]
+[ext_resource type="PackedScene" uid="uid://6puyqda0iq0k" path="res://scenes/npcs/enemy_vulture.tscn" id="7_cqal4"]
+[ext_resource type="PackedScene" uid="uid://bot0jglnu414v" path="res://scenes/killzone.tscn" id="8_o3sye"]
+[ext_resource type="Script" uid="uid://cnu3ikavblwi" path="res://scripts/killzone.gd" id="9_24ks5"]
+[ext_resource type="PackedScene" uid="uid://b3pqa7a1xkie4" path="res://scenes/finish.tscn" id="10_s4es8"]
+[ext_resource type="PackedScene" uid="uid://0uhgis3ssxr0" path="res://scenes/ui.tscn" id="11_63e4f"]
+[ext_resource type="PackedScene" uid="uid://dg4g573d1n0c3" path="res://scenes/wassertropfen.tscn" id="12_y6lc1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37l40"]
-texture = ExtResource("2_rekfg")
+texture = ExtResource("1_8g4ke")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -277,7 +277,7 @@ terrain_set_0/terrain_5/name = "water"
 terrain_set_0/terrain_5/color = Color(0.7372296, 0.16586518, 0.49889725, 1)
 sources/0 = SubResource("TileSetAtlasSource_37l40")
 
-[node name="level1" type="Node2D" unique_id=1611433740]
+[node name="level2" type="Node2D" unique_id=1611433740]
 
 [node name="Foreground" type="TileMapLayer" parent="." unique_id=291908964]
 position = Vector2(-52, -49)
@@ -296,46 +296,45 @@ motion_scale = Vector2(0.2, 0.2)
 [node name="DesertLook" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1362695329]
 position = Vector2(89.99999, -4.166649)
 scale = Vector2(0.926, 0.9)
-texture = ExtResource("2_bbk5w")
+texture = ExtResource("2_56gwk")
 
 [node name="Skull" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1899304165]
 position = Vector2(343.33334, -236.66663)
 scale = Vector2(0.14859134, 0.13769267)
-texture = ExtResource("7_7g1mn")
+texture = ExtResource("3_ve5ok")
 
 [node name="Parallax2D" type="Parallax2D" parent="ParallaxBackground" unique_id=1878484726]
 
 [node name="CaveLook" type="Sprite2D" parent="ParallaxBackground/Parallax2D" unique_id=188800218]
 position = Vector2(90.85423, 850.0001)
 scale = Vector2(0.87364113, 0.92094254)
-texture = ExtResource("4_conm7")
+texture = ExtResource("4_cleqw")
 
-[node name="Player" parent="." unique_id=1577613362 instance=ExtResource("5_412rr")]
+[node name="Player" parent="." unique_id=1577613362 instance=ExtResource("5_wvb8j")]
 position = Vector2(-518, -190)
 
 [node name="CameraPlayer" type="Camera2D" parent="." unique_id=1000112521]
 position = Vector2(-549, -266)
-script = ExtResource("1_h0nx4")
+script = ExtResource("6_g8vcy")
 
 [node name="Enemies" type="Node" parent="." unique_id=603794275]
 
-[node name="Vulture" parent="Enemies" unique_id=1990780615 instance=ExtResource("9_conm7")]
+[node name="Vulture" parent="Enemies" unique_id=1990780615 instance=ExtResource("7_cqal4")]
 position = Vector2(719, -293)
 
 [node name="GameManager" type="Node" parent="." unique_id=1946624181]
 
-[node name="Killzone" parent="." unique_id=941245091 instance=ExtResource("3_ic38a")]
+[node name="Killzone" parent="." unique_id=941245091 instance=ExtResource("8_o3sye")]
 position = Vector2(36, 294)
 collision_mask = 6
-script = ExtResource("4_m1t5a")
+script = ExtResource("9_24ks5")
 
-[node name="Finish" parent="." unique_id=393112082 instance=ExtResource("10_d3jkd")]
+[node name="Finish" parent="." unique_id=393112082 instance=ExtResource("10_s4es8")]
 position = Vector2(772, -236)
-nextscene = "level2.tscn"
 
-[node name="UI" parent="." unique_id=1980821094 instance=ExtResource("8_bbk5w")]
+[node name="UI" parent="." unique_id=1980821094 instance=ExtResource("11_63e4f")]
 
-[node name="Wassertropfen" parent="." unique_id=1587811656 instance=ExtResource("12_2ku1j")]
+[node name="Wassertropfen" parent="." unique_id=1587811656 instance=ExtResource("12_y6lc1")]
 position = Vector2(326, -139)
 
 [connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]

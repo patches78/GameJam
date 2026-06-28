@@ -35,6 +35,7 @@ func _on_killbox_body_entered(body) -> void:
 	if (body.name == "Player"):
 		#d_sound.play()
 		print("Du trocknest aus.")
+		player.curWater = 0
 		#Todo: fehlt noch Rest
 		
 		#var y_delta = position.y - body.position.y
